@@ -1,0 +1,21 @@
+{
+  "name": "media-share-server",
+  "version": "1.0.0",
+  "description": "Media Share Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.root3287.site/Root3287/media-share"
+  },
+  "keywords": [
+    "Media-Share"
+  ],
+  "author": "Timothy Gibbons",
+  "license": "GPL-2.0-only",
+  "dependencies": {
+    "socket.io": "^4.4.1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+	"name": "Media Share",
+	"workspaces": [
+			"server",
+			"client"
+	],
+	"scripts": {
+		"postinstall": "./clientBootstrap.sh"
+	}
+}

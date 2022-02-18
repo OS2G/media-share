@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+	"name": "Media-Share Client",
+	"version": "1.0.0",
+	"description": "Web Browser Extension for Media Share",
+
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.youtube.com/watch*",
+				"*://*.hulu.com/watch*",
+				"*://*.netflix.com/watch*"
+			],
+			"scripts": [
+				"socket.io.min.js",
+				"jquery.min.js",
+				"extension.js"
+			]
+		}
+	]
+}
