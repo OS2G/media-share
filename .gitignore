@@ -1,4 +1,3 @@
 node_modules/
 
-client/socket.io.min.js
-client/jquery.min.js
+client/assets/

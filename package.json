@@ -5,6 +5,6 @@
 			"client"
 	],
 	"scripts": {
-		"postinstall": "./clientBootstrap.sh"
+		"postinstall": "./clientBootstrap.sh clean && ./clientBootstrap.sh install"
 	}
 }
