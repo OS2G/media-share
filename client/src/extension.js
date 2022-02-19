@@ -14,7 +14,15 @@ function init(){
 	});
 
 	$("video").on("timeupdate", async (e) => {
-		console.log("update");
+		console.log(e);
+	});
+
+	$("video").on("seeked", async (e) => {
+		console.log("seeked");
+	});
+
+	$("video").on("stalled", async (e) =>{
+		console.log("stalled");
 	});
 }
 
