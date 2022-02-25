@@ -1,3 +1,5 @@
 $(function(){
-	console.log("Loaded Popup");
-})
+	$("#test").click(()=>{
+		console.log("Test");
+	})
+});
