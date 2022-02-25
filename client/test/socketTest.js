@@ -14,7 +14,7 @@ const rl = readline.createInterface({
 });
 
 rl.on('line', function(line){
-   socket.emit("message", line);
+   socket.emit("message", {message: line});
 });
 
 console.log("Connected to the server");
