@@ -3,8 +3,14 @@ const io = require("socket.io-client");
 
 const socket = io("ws://127.0.0.1:8080");
 
+socket.on("connect", ()=>{
+  console.log(`Connected to the server as ${socket.id}`);
+});
+
 socket.on("message", text =>{
-	console.log(`SERVER> ${text}`);
+  const json = JSON.parse(text);
+  if(json.socket == socket.id) return;
+	console.log(`${json.socket}> ${json.message.message}`);
 });
 
 const rl = readline.createInterface({
@@ -16,5 +22,3 @@ const rl = readline.createInterface({
 rl.on('line', function(line){
    socket.emit("message", {message: line});
 });
-
-console.log("Connected to the server");
