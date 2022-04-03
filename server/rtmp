@@ -1,0 +1,26 @@
+server {
+	listen 80;
+	server_name localhost;
+
+	location / {
+		add_header Access-Control-Allow-Origin *;
+		root /var/www/html/stream;
+	}
+
+	location /stat {
+		rtmp_stat all;
+		rtmp_stat_stylesheet stat.xsl;
+	}
+
+	location /stat.xsl {
+		root /var/www/html/rtmp;
+	}
+
+	location /control {
+		rtmp_control all;
+	}
+}
+
+types {
+	application/dash+xml mpd;
+}
