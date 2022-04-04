@@ -5,13 +5,13 @@ A tool to help with watch party for private viewing.
 The server is built using docker, but you could use the script to set up your own server. 
 
 ```
-docker build . -t rtmp-server
+docker build server -t rtmp-server
 ```
 
 ## Running the server
 
 ```
-docker run -d rtmp-server
+docker run -d -p 1935:1935 rtmp-server
 ```
 
 ## Streaming
@@ -78,3 +78,7 @@ Use VLC.
 1. MEDIA > Open Network Stream.
 2. Enter URL: `rmtp://IP_ADDR/live/live`
 3. Play
+
+## Sources to help with installtion
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-video-streaming-server-using-nginx-rtmp-on-ubuntu-20-04
+https://www.servermania.com/kb/articles/nginx-rtmp/
