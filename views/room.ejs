@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Room</title>
+	<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+	<script>
+		const ROOM_ID ="<%= roomID %>";
+	</script>
+	<script src="/socket.io/socket.io.js" defer></script>
+	<script src="/assets/peerjs/peerjs.min.js" defer></script>
+	<script src="/assets/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+	<script src="/script.js" defer></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row my-3">
+			<div class="col-md-9">
+				<div class="card">
+					<div class="card-body">
+						<video id="video" width="100%" height="100%"></video>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card">
+					<div class="card-body">
+						<form action="">
+							<div class="row mb-3">
+								<textarea class="form-control" id="chatlog" rows="20" disabled></textarea>
+							</div>
+
+							<div class="row mb-3">
+								<textarea class="form-control" id="chatbox" rows="1"></textarea>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-body">
+						<h3>Hello World</h3>
+						<p>Some description</p>
+
+						<btn id="broadcast-start" class="btn btn-danger">Start Broadcast</btn>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
