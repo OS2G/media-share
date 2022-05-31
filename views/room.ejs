@@ -6,7 +6,8 @@
 	<title>Room</title>
 	<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
 	<script>
-		const ROOM_ID ="<%= roomID %>";
+		const ROOM_ID = "<%= roomID %>";
+		const SIGNAL_CONFIG = <%- JSON.stringify(config.signal) %>;
 	</script>
 	<script src="/socket.io/socket.io.js" defer></script>
 	<script src="/assets/peerjs/peerjs.min.js" defer></script>
@@ -19,7 +20,7 @@
 			<div class="col-md-9">
 				<div class="card">
 					<div class="card-body">
-						<video id="video" width="100%" height="100%"></video>
+						<video id="video" width="100%" height="100%" controls></video>
 					</div>
 				</div>
 			</div>

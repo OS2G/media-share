@@ -1,7 +1,8 @@
 const socket = io("/");
 const myPeer = new Peer(undefined, {
 	host: "/",
-	port: 8081
+	path: SIGNAL_CONFIG.path,
+	port: (location.port != 80) ? location.port : undefined,
 });
 
 myPeer.on("open", id => {
